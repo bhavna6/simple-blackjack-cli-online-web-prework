@@ -61,10 +61,11 @@ end
 def runner
   # code runner here
   welcome
-  initial_round
-  display_card_total
-  prompt_user
-  get_user_input
-  hit?
+  card_total = initial_round
+  while card_total < 21
+    card_total = hit?(card_total)
+    card_total = display_card_total(card_total)
+  end
+  end_game(card_total)
 end
     
