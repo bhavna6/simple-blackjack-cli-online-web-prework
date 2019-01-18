@@ -1,6 +1,6 @@
 def welcome
   # code #welcome here
-  puts "Welcome to the Blackjack Table."
+  puts "Welcome to the Blackjack Table"
 end
 
 def deal_card
@@ -10,7 +10,7 @@ end
 
 def display_card_total
   # code #display_card_total here
-  puts "Your cards add up to #{card_total}"
+  "Your cards add up to #{card_total}"
 end
 
 def prompt_user
@@ -25,7 +25,7 @@ end
 
 def end_game
   # code #end_game here
-  puts "Sorry, you hit #{card_total}. Thanks for playing!"
+  "Sorry, you hit #{card_total}. Thanks for playing!"
 end
 
 def initial_round
