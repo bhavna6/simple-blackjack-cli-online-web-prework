@@ -37,18 +37,16 @@ end
 
 def hit?
   # code hit? here
-  hit?(current_card_value)
   prompt_user
-  get_user_input = user_input
-  while user_input != "h" && user_input != "s"
-    invalid_command
-    prompt_user
-  until user_input == "h"
-    current_card_value += deal_card
+  if get_user_input == 'h'
+    card_total += deal_card
   end
-  return current_card_value
+    card_total
 end
 
+def invalid_command
+  # code invalid_command here
+  puts "invalid"
 end
 
 def invalid_command
