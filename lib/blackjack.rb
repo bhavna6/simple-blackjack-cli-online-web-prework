@@ -39,6 +39,7 @@ end
 def hit?
   # code hit? here
   prompt_user
+  userIn
 end
 
 def invalid_command
