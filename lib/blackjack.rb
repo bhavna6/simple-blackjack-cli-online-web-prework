@@ -38,16 +38,14 @@ end
 
 def hit?
   # code hit? here
-  def hit?(current_card_value)
+  hit?(current_card_value)
   prompt_user
   get_user_input = user_input
-  if user_input != "h" && user_input != "s"
+  while user_input != "h" && user_input != "s"
     invalid_command
     prompt_user
-  elsif user_input == "h"
+  until user_input == "h"
     current_card_value += deal_card
-  else user_input == "s"
-    end_game
   end
   return current_card_value
 end
