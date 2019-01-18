@@ -38,8 +38,20 @@ end
 
 def hit?
   # code hit? here
+  def hit?(current_card_value)
   prompt_user
-  userIn
+  user_input = get_user_input
+  while user_input != "h" && user_input != "s"
+    invalid_command
+    prompt_user
+    user_input = get_user_input
+  end
+  if user_input == "h"
+    current_card_value += deal_card
+  end
+  return current_card_value
+end
+
 end
 
 def invalid_command
