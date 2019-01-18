@@ -43,7 +43,6 @@ def hit?
   get_user_input = user_input
   if user_input != "h" && user_input != "s"
     invalid_command
-    puts "Please enter a valid command"
     prompt_user
   elsif user_input == "h"
     current_card_value += deal_card
@@ -57,6 +56,7 @@ end
 
 def invalid_command
   # code invalid_command here
+  puts "Please enter a valid command"
 end
 
 #####################################################
