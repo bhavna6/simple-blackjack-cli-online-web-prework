@@ -47,7 +47,7 @@ def hit?
   elsif user_input == "h"
     current_card_value += deal_card
   else user_input == "s"
-    break
+    end_game
   end
   return current_card_value
 end
@@ -65,5 +65,11 @@ end
 
 def runner
   # code runner here
+  welcome
+  initial_round
+  display_card_total
+  prompt_user
+  get_user_input
+  hit?
 end
     
