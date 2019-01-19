@@ -22,8 +22,8 @@ end
 def initial_round
   # code #initial_round here
   sum = rand(1...11) 
-  deal_card(return sum)
-  deal_card(print sum)
+  deal_card(sum)
+  deal_card(sum)
   display_card_total(puts sum)
 end
 
