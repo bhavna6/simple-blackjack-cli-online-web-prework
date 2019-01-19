@@ -1,16 +1,17 @@
+def deal_card
+  # code #deal_card here
+    rand(1..11)
+end
+
+def display_card_total(card_total)
+  # code #display_card_total here
+  puts "Your cards add up to #{card_total}"
+  card_total
+end
+
 def welcome
   # code #welcome here
   puts "Welcome to the Blackjack Table"
-end
-
-def deal_card
-  # code #deal_card here
-  rand(1..11)
-end
-
-def display_card_total
-  # code #display_card_total here
-  puts "Your cards add up to #{card_total}"
 end
 
 def prompt_user
@@ -18,23 +19,23 @@ def prompt_user
   puts "Type 'h' to hit or 's' to stay"
 end
 
-def get_user_input
-  # code #get_user_input here
-  gets.chomp
-end
-
-def end_game
-  # code #end_game here
-  puts "Sorry, you hit #{card_total}. Thanks for playing!"
-end
-
 def initial_round
   # code #initial_round here
   sum = rand(1..11) + rand(1..11)
-  display_card_total(sum)\
+  display_card_total(sum)
 end
 
-def hit?
+def end_game(card_total)
+  # code #end_game here
+    puts "Sorry, you hit #{card_total}. Thanks for playing!"
+end
+
+def get_user_input
+  # code #get_user_input here
+  gets.strip.chomp
+end
+
+def hit? (card_total)
   # code hit? here
   prompt_user
   if get_user_input == 'h'
@@ -45,12 +46,7 @@ end
 
 def invalid_command
   # code invalid_command here
-  print "invalid"
-end
-
-def invalid_command
-  # code invalid_command here
-  print "Please enter a valid command"
+  puts "invalid"
 end
 
 #####################################################
