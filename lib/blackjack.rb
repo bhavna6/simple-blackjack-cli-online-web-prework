@@ -23,8 +23,8 @@ def initial_round
   # code #initial_round here
   sum = rand(1..11) + rand(1..11)
   deal_card(sum)
-  display_card_total(sum)
   deal_card(sum)
+  display_card_total(sum)
 end
 
 def end_game(card_total)
@@ -57,11 +57,13 @@ end
 def runner
   # code runner here
   welcome  
-  card_total = initial_round
+  initial_round
+  hit?
+  display_card_total
   while card_total < 21
     card_total = hit?(card_total)
     card_total = display_card_total(card_total)
   end
-  end_game(card_total)
+  end_game
 end
 
